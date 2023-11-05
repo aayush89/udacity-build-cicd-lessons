@@ -1,6 +1,9 @@
 name: My First Workflow
 
-on: [push]
+on: 
+  pull_reuest:
+    branches:
+      - main
 
 jobs:
   build:

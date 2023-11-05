@@ -1,9 +1,24 @@
+# Workflow name
 name: My First Workflow
 
+#triggers on the workflow
 on:
+  # Manual trigger using the workflow_dispatch event
+  workflow_dispatch:
+
+  #automatic trigger on push events to the master branch
+  push:
+    branches:
+      - master
+  
+  # Automatic trigger on pull request events targeting the master branch
   pull_request:
     branches:
       - master
+
+  # Scheduled trigger every minute via a cron job
+  schedule:
+    - cron: '* * * * *'
 
 jobs:
   build:
@@ -13,10 +28,10 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v3
 
-      - name: use Node.js 18
+      - name: use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: latest
       
       - name: Print a message
         run: echo "Hello, world!"

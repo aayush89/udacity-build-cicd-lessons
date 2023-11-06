@@ -4,7 +4,7 @@ name: My First Workflow
 #triggers on the workflow
 on:
   # Manual trigger using the workflow_dispatch event
-  #workflow_dispatch:
+  workflow_dispatch:
 
   #automatic trigger on push events to the master branch
   #push:
@@ -12,9 +12,9 @@ on:
       #- master
   
   # Automatic trigger on pull request events targeting the master branch
-  pull_request:
-    branches:
-      - master
+  # pull_request:
+  #   branches:
+  #     - master
 
   # Scheduled trigger every minute via a cron job
   #schedule:
@@ -35,11 +35,11 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
       
-      - name: install dependencies
-        run: npm ci
+      # - name: install dependencies
+      #   run: npm ci
 
-      - name: Run tests
-        run: npm test
+      # - name: Run tests
+      #   run: npm test
       
       - name: Print a message
         run: echo "Hello, world!"

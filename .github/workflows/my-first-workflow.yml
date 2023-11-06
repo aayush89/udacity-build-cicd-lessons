@@ -12,9 +12,9 @@ on:
       #- master
   
   # Automatic trigger on pull request events targeting the master branch
-  # pull_request:
-  #   branches:
-  #     - master
+  pull_request:
+    branches:
+      - master
 
   # Scheduled trigger every minute via a cron job
   #schedule:

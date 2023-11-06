@@ -35,11 +35,11 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
       
-      # - name: install dependencies
-      #   run: npm ci
+      - name: install dependencies
+        run: npm ci
 
-      # - name: Run tests
-      #   run: npm test
+      - name: Run tests
+        run: npm test
       
       - name: Print a message
         run: echo "Hello, world!"

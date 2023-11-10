@@ -1,0 +1,23 @@
+name: vacation_days
+
+on:
+  pull-request:
+    branches:
+      - master
+
+env:
+  MONTH_OF_YEAR: December
+  CURRENT_YEAR: 2023
+
+jobs:
+  holiday_status_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Provide total annual vacation days"
+        if: ${{ env.CURRENT_YEAR == '2023' }}
+        run: echo "$Greeting $Full_Name. As of $MONTH_OF_YEAR $CURRENT_YEAR you will have $Vacation_Days vacation days!"
+        env:
+          Full_Name: UdaCycle Employee
+          Vacation_Days: 20

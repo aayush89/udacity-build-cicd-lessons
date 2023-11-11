@@ -8,5 +8,6 @@ inputs:
 outputs:
   timestamp:
     description: 'Time of greeting'
-runs: |
+run: |
   'main.py'
+

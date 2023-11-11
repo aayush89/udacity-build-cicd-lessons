@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 def main():
-    name = os.getenv('INPUT_NAME', 'Udacity Learner')
+    name = os.environ.get('INPUT_NAME', 'Udacity Learner')
 
     print(f'Hello, {name}! Welcome to continuous integration!')
     timestamp = datetime.now().isoformat()

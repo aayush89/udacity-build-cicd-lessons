@@ -23,7 +23,7 @@ runs:
     
     - name: Pass Inputs to Shell
       run: |
-        echo "INPUT_NAME=${{ inputs.name }}" >> GITHUB_ENV
+        echo "INPUT_NAME=${{ inputs.name }}"
       shell: bash
     
     - name: get timestamp

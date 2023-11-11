@@ -8,7 +8,7 @@ inputs:
 outputs:
   timestamp:
     description: 'Time of greeting'
-    value: ${{ steps.get-timestamp.outputs.timestamp }}
+    #value: ${{ steps.get-timestamp.outputs.timestamp }}
 runs: 
   using: 'composite'
   steps:

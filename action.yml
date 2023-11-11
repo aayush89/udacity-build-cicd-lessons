@@ -7,7 +7,7 @@ inputs:
     default: 'Udacity Learner'
 outputs:
   timestamp:
-  description: 'Time of greeting'
+    description: 'Time of greeting'
 runs:
   using: 'composite'
   main: 'main.py'

@@ -10,4 +10,3 @@ outputs:
     description: 'Time of greeting'
 run: |
   'main.py'
-

@@ -6,8 +6,18 @@ on:
       - master
 
 jobs:
-  build:
+  get-timestamp:
     runs-on: ubuntu-latest
+    name: get the timestamp for the business greeting
     steps:
-      - name: Run custom_action
-        uses: aayush89/udacity-build-cicd-lessons@master
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: fetch name
+        id: get_timestamp
+        uses: ./
+        with:
+          name: 'Aayush'
+      
+      - name: print the timestamp
+        run: echo "${{ steps.get_timestamp.outputs.timestamp }}"

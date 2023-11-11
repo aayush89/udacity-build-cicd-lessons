@@ -1,0 +1,13 @@
+name: use_custom_action
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run custom_action
+        uses: aayush89/udacity-build-cicd-lessons@master

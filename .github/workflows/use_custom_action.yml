@@ -17,7 +17,7 @@ jobs:
         id: get_timestamp
         uses: ./
         with:
-          name: 'Aayush'
+          name: Aayush
       
       - name: print the timestamp
         run: echo "${{ steps.get_timestamp.outputs.timestamp }}"

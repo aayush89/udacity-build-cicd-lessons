@@ -20,4 +20,4 @@ jobs:
           name: Aayush
       
       - name: print the timestamp
-        run: echo "${{ steps.get_timestamp.outputs.get_timestamp.value }}"
+        run: echo "${{ steps.get_timestamp.outputs.get_timestamp }}"

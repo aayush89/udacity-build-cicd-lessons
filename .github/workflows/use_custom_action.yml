@@ -15,7 +15,7 @@ jobs:
 
       - name: fetch name
         id: get_timestamp
-        uses: ./
+        uses: .
         with:
           name: 'Aayush'
       

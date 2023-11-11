@@ -52,17 +52,17 @@ jobs:
          echo "Deployed to production environment"
 
   
-  kubernetes_deploy:
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  # kubernetes_deploy:
+  #   runs-on: ubuntu-latest
+  #   environment: production
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
       
-      - name: Deploy Kubernetes
-        uses: azure/k8-deploy@v4
-        with:
-          manifests: |
-            kubernetes/deployment.yaml
-            kubernetes/service.yaml
-          namespace: 'my-app'
+  #     - name: Deploy Kubernetes
+  #       uses: azure/k8-deploy@v4
+  #       with:
+  #         manifests: |
+  #           kubernetes/deployment.yaml
+  #           kubernetes/service.yaml
+  #         namespace: 'my-app'

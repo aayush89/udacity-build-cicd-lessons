@@ -4,12 +4,12 @@ Resources:
   UdaBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: uda-iye-bucket
+      BucketName: website-artifacts
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: error.html
 Outputs:
-  WebsiteURL:
+  ArtifactBucketWebsiteURL:
     Value: !GetAtt UdaBucket.WebsiteURL
     Description: URL for website hosted on S3
   S3BucketSecureURL:

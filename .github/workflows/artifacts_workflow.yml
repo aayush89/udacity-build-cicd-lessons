@@ -1,7 +1,9 @@
 name: Dynamic Workflow and Upload Files
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
     inputs:
       index_document:
         description: 'Name of the index document'

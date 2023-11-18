@@ -3,7 +3,7 @@ name: Deploy to AWS Lambda
 on:
   pull_request:
     branches:
-      - master/*
+      - master/lambda_test
 
 env:
   RELEASE_NAME: ${GITHUB_REF##*master/}

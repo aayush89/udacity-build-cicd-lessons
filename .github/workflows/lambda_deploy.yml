@@ -1,0 +1,19 @@
+name: Deploy to AWS Lambda
+
+on:
+  pull_request:
+    branches:
+      - release/*
+
+env:
+  RELEASE_NAME: ${GITHUB_REF##*release/}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: echo some values
+        run: |
+          echo "${GITHUB_REF}"
+          echo "${GITHUB_REF##*release/}"

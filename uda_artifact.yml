@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Create an S3 bucket
+Resources:
+  UdaBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: website-artifacts
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+Outputs:
+  ArtifactBucketWebsiteURL:
+    Value: !GetAtt UdaBucket.WebsiteURL
+    Description: URL for website hosted on S3
+  S3BucketSecureURL:
+    Value: !GetAtt UdaBucket.DomainName
+    Description: Name of S3 bucket to hold website content
+  

@@ -1,9 +1,8 @@
 name: 'Terraform'
 on:
-  push:
+  pull_request:
     branches:
       - master
-  pull_request:
 
 jobs:
   terraform:
@@ -35,7 +34,7 @@ jobs:
         continue-on-error: true
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'pull_request'
         run: terraform apply -auto-approve
 
       - name: Terraform Destroy

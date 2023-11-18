@@ -4,7 +4,7 @@ name: ci-fullstack-workflow
 on:
   pull_request:
     branches:
-      - main
+      - master
   
 
 #Use a matrix strategy to use Node.js versions 16.x and 18.x
@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Install the dependencies.
-      - run: cd backend && npm ci && npm audit fix
+      - run: cd backend && npm ci
 
       # Run the tests.
       - run: cd backend && npm test

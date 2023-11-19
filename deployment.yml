@@ -16,4 +16,4 @@ spec:
       - name: my-k8s-app
         image: aayush06/kubernetes_test:tagname
         ports:
-        - containerPort: 3000
+        - containerPort: 8080

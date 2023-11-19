@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-k8s-app
-        image: hello-world:latest
+        image: aayush06/kubernetes_test:tagname
         ports:
         - containerPort: 3000

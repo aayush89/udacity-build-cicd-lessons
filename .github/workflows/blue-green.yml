@@ -36,8 +36,8 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      # - name: Terraform Apply
+      #   run: terraform apply -auto-approve
       
       - name: check status of Blue Environment
         id: blue_status

@@ -2,7 +2,8 @@ name: 'Terraform Blue-Green Deployment'
 
 on:
   pull_request:
-    - master
+    branches:
+      - master
 
 env: 
   TF_ACTION_WORKING_DIR: 'terraform'
